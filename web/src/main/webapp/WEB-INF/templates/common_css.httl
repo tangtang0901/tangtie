@@ -1,0 +1,32 @@
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+	<link href="//cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="//cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="//cdn.bootcss.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+	<link href="/assets/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+	<link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+	<link href="/assets/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+
+	<link href="/assets/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+
+	<link href="/assets/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+
+	<link href="https://cdn.bootcss.com/jquery-toast-plugin/1.3.1/jquery.toast.min.css" rel="stylesheet" type="text/css"/>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+
+
+	<style>
+		/*jquery validation css*/
+		label.error { color: red; }
+		/*miniui list css*/
+		.list-font{
+			font-weight: bold;
+		}
+	</style>
+	<!-- END GLOBAL MANDATORY STYLES -->

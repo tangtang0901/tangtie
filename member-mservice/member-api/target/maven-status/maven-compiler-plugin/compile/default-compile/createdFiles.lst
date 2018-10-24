@@ -1,0 +1,8 @@
+com\yunwoo\cybershop\command\MemberEnableCommand.class
+com\yunwoo\cybershop\command\MemberChangePasswordCommand.class
+com\yunwoo\cybershop\command\MemberCreateCommand.class
+com\yunwoo\cybershop\command\MemberUpdateCommand.class
+com\yunwoo\cybershop\dto\MemberDTO.class
+com\yunwoo\cybershop\command\MemberDisableCommand.class
+com\yunwoo\cybershop\dubbo\MemberCommandDubboService.class
+com\yunwoo\cybershop\dubbo\MemberQueryDubboService.class

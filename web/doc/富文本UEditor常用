@@ -1,0 +1,83 @@
+官方地址：http://fex.baidu.com/ueditor/#api-common
+初始化：
+var ue = UE.getEditor('ue_content',{
+                //两倍iphone6宽为宽
+                initialFrameWidth:750,//初始化宽度
+                //一倍iphone6高为高
+                initialFrameHeight:667,//初始化高度
+                maximumWords:4000,//最大字数
+                savePath:['article'],
+                pictureLocation:'article'
+            });
+
+//设置内容
+ue.ready(function() {
+    ue.setContent('<p>hello!</p>');
+});
+
+//获取内容
+var html = ue.getContent();
+
+常用方法
+实例化编辑器到id为 container 的 dom 容器上：详细
+var ue = UE.getEditor('container');
+设置编辑器内容：详细
+ue.ready(function() {
+    ue.setContent('<p>hello!</p>');
+});
+追加编辑器内容：详细
+ue.ready(function() {
+    ue.setContent('<p>new text</p>', true);
+});
+获取编辑器html内容：详细
+ue.ready(function() {
+    var html = ue.getContent();
+});
+获取纯文本内容：详细
+ue.getContentTxt();
+获取保留格式的文本内容：详细
+ue.getPlainTxt();
+获取纯文本内容：详细
+ue.getContentTxt();
+判断编辑器是否有内容：详细
+ue.hasContents();
+让编辑器获得焦点：详细
+ue.focus();
+让编辑器获得焦点
+ue.blur();
+判断编辑器是否获得焦点：详细
+ue.isFocus();
+设置当前编辑区域不可编辑：详细
+ue.setDisabled();
+设置当前编辑区域可以编辑：详细
+ue.setEnabled();
+隐藏编辑器：详细
+ue.setHide();
+显示编辑器：详细
+ue.setShow();
+获得当前选中的文本：详细
+ue.selection.getText();
+常用命令：详细
+在当前光标位置插入html内容
+ue.execCommand('inserthtml', '<span>hello!</span>');
+设置当前选区文本格式：详细
+ue.execCommand('bold'); //加粗
+ue.execCommand('italic'); //加斜线
+ue.execCommand('subscript'); //设置上标
+ue.execCommand('supscript'); //设置下标
+ue.execCommand('forecolor', '#FF0000'); //设置字体颜色
+ue.execCommand('backcolor', '#0000FF'); //设置字体背景颜色
+回退编辑器内容：详细
+ue.execCommand('undo');
+撤销回退编辑器内容：详细
+ue.execCommand('redo');
+切换源码和可视化编辑模式：详细
+ue.execCommand('source');
+选中所有内容：详细
+ue.execCommand('selectall');
+清空内容：详细
+ue.execCommand('cleardoc');
+读取草稿箱
+ue.execCommand('drafts');
+清空草稿箱
+ue.execCommand('clearlocaldata');

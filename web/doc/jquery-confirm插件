@@ -1,0 +1,36 @@
+文档：https://craftpip.github.io/jquery-confirm/
+
+例子：
+$.alert({
+    theme: 'supervan',
+    title: 'Alert!',
+    content: 'Simple alert!',
+});
+
+$.confirm({
+    theme: 'supervan',
+    title: '删除!',
+    content: '是否确认删除？',
+    buttons: {
+        "确认": function () {
+            $.ajax({
+                async:false,
+                dataType:"json",
+                url:"",
+                data:{"id":id},
+                success: function (data) {
+                },
+                error:function(xhr,status,error){
+                }
+            });
+        },
+        "取消": function () {
+        }
+    }
+});
+
+$.dialog({
+    theme: 'supervan',
+    title: 'Text content!',
+    content: 'Simple modal!',
+});

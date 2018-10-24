@@ -1,0 +1,3 @@
+<link href="/assets/plugins/datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
+<script src="/assets/plugins/datetimepicker/bootstrap-datetimepicker.js"></script>
+<script src="/assets/plugins/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>

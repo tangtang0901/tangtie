@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan(%logger) - %msg%n</pattern>
+        </encoder>
+        <charset>UTF-8</charset>
+    </appender>
+    <appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/tmp/test.log</File>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%thread] %logger - %msg%n</pattern>
+        </encoder>
+        <charset>UTF-8</charset>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/TServer.log.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <!-- <logger name="com.friend.team.web.controller" level="warn">
+        <appender-ref ref="consoleAppender,fileAppender" />
+    </logger> -->
+    <root level="warn">
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="fileAppender" />
+    </root>
+</configuration>

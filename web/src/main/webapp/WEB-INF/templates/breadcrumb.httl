@@ -1,0 +1,23 @@
+						<ul class="breadcrumb">
+							#for(MenuDTO item : breadCrumb)
+							<li>
+								#if(for.first)
+								<i class="icon-home"></i>
+								#end
+								<a href="${item.url}${'?menuId='}${item.id}${urlParamsStr}">${item.name}</a>
+								#if(!for.last)
+								<i class="icon-angle-right"></i>
+								#end
+							</li>
+							#end
+							<!-- <li>
+
+								<a href="#">Layouts</a>
+
+								<i class="icon-angle-right"></i>
+
+							</li>
+
+							<li><a href="#">Horzontal Menu 1</a></li> -->
+
+						</ul>

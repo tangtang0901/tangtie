@@ -1,0 +1,54 @@
+${extends("/base_main_content.httl")}
+#macro(page_level_style)
+${include("/easyui_css.httl")}
+<style type="text/css">
+    .list-font{
+        font-weight: bold;
+    }
+
+</style>
+#end
+
+#macro(page_main_content)
+<div class="row-fluid">
+
+    <div class="span12">
+
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+
+        <div class="portlet box green">
+
+            <div class="portlet-title">
+
+                <div class="caption"><i class="icon-book"></i>文章列表</div>
+                <div class=" pull-right "><a href="javascript:article.search()" class="btn blue" >查询</a></div>
+                <div class=" pull-right"><input id="keyWord" class="m-wrap large" placeholder="&nbsp;&nbsp;请输入标题" style="height: 30px;"/></div>
+                <div class=" pull-right"><input id="keyWordId" class="m-wrap large" placeholder="&nbsp;&nbsp;请输入ID" style="height: 30px;"/></div>
+                <div class="pull-right "><a href="javascript:article.toAddPage()" class="btn blue">新增</a></div>
+            </div>
+
+            <div class="portlet-body">
+                <table id="dg" class="span12" style="height: 600px;"></table>
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE TABLE PORTLET-->
+
+    </div>
+</div>
+#end
+
+#macro(page_level_js_plugin)
+${include("/easyui_js.httl")}
+#end
+
+#macro(page_level_js)
+<script src="/assets/js/module/website/article/article.js" ></script>
+<script>
+    article.initList();
+</script>
+#end
+
+
+

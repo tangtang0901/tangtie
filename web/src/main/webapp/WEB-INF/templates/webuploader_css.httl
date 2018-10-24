@@ -1,0 +1,26 @@
+<link href="http://cdn.staticfile.org/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+<style>
+    .upload-state-done:after {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 32px;
+        position: absolute;
+        bottom: 0;
+        right: 4px;
+        color: #4cae4c;
+        z-index: 99;
+    }
+
+    .file-item {
+        float: left;
+        position: relative;
+        margin: 0 20px 20px 0;
+        padding: 4px;
+    }
+
+</style>

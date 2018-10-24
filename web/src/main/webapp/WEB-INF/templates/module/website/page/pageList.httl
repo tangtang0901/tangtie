@@ -1,0 +1,145 @@
+${extends("/base_main_content.httl")}
+#macro(page_level_style)
+${include("/miniui_css.httl")}
+<style type="text/css">
+    .list-font{
+        font-weight: bold;
+    }
+
+</style>
+#end
+
+#macro(page_main_content)
+<div class="row-fluid">
+
+    <div class="span4">
+
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+
+        <div class="portlet box green">
+
+            <div class="portlet-title">
+
+                <div class="caption"><i class="icon-book"></i>Page列表</div>
+                <div class="pull-right "><a href="/3000/page/pageAdd" class="btn green-stripe">新增</a></div>
+            </div>
+
+            <div class="portlet-body">
+                <div id="datagrid1" class="mini-datagrid" class="span12"
+                     url="/3000/page/getPages" idField="id"
+                     allowResize="true" pageSize="30"
+                     allowCellEdit="true" allowCellSelect="true" multiSelect="true"
+                     editNextOnEnterKey="true"  editNextRowCell="true" style="height: 600px"
+
+                >
+                    <div property="columns">
+                        <div type="indexcolumn" headerAlign="center" headerCls="font-bold">序号</div>
+                        <div  headerAlign="center" headerCls="font-bold" renderer="page.onActionRenderer" align="center">操作</div>
+                        <div name="id"  field="id" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">页面ID</div>
+                        <div name="title"  field="title" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">页面标题</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <input type="hidden" name="hid_pageId" id="hid_pageId" value=""/>
+
+        </div>
+
+        <!-- END SAMPLE TABLE PORTLET-->
+
+    </div>
+    <div class="span4">
+
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+
+        <div class="portlet box green">
+
+            <div class="portlet-title">
+
+                <div class="caption"><i class="icon-book"></i>页面楼层列表</div>
+                <div class="pull-right "><a href="" class="btn green-stripe" id="floor_add">新增</a></div>
+            </div>
+
+            <div class="portlet-body">
+                <div id="datagrid2" class="mini-datagrid" class="span12"
+                     url="/3000/page/getFloors" idField="id"
+                     allowResize="true" pageSize="30"
+                     allowCellEdit="true" allowCellSelect="true" multiSelect="true"
+                     editNextOnEnterKey="true"  editNextRowCell="true" style="height: 600px"
+
+                >
+                    <div property="columns">
+                        <div type="indexcolumn" headerAlign="center" headerCls="font-bold">序号</div>
+                        <div  headerAlign="center" headerCls="font-bold" renderer="page.onActionRenderer2" align="center">操作</div>
+                        <div name="id"  field="id" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">楼层ID</div>
+                        <div name="pageId"  field="pageId" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">页面ID</div>
+                        <div name="type"  field="type" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">类型</div>
+                        <div name="sequence"  field="sequence" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">顺序</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE TABLE PORTLET-->
+
+    </div>
+    <div class="span4">
+
+        <!-- BEGIN SAMPLE TABLE PORTLET-->
+
+        <div class="portlet box green">
+
+            <div class="portlet-title">
+
+                <div class="caption"><i class="icon-book"></i>楼层元素列表</div>
+                <div class="pull-right "><a href="/3000/page/elementAdd" class="btn green-stripe" >新增</a></div>
+            </div>
+
+            <div class="portlet-body">
+                <div id="datagrid3" class="mini-datagrid" class="span12"
+                     url="/3000/page/getElements" idField="id"
+                     allowResize="true" pageSize="30"
+                     allowCellEdit="true" allowCellSelect="true" multiSelect="true"
+                     editNextOnEnterKey="true"  editNextRowCell="true" style="height: 600px"
+
+                >
+                    <div property="columns">
+                        <div type="indexcolumn" headerAlign="center" headerCls="font-bold">序号</div>
+                        <div  headerAlign="center" headerCls="font-bold" renderer="page.onActionRenderer3" align="center">操作</div>
+                        <div name="text"  field="text" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">文字</div>
+                        <div name="picture"  field="picture" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">图片</div>
+                        <div name="url"  field="url" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">url</div>
+                        <div name="sequence"  field="sequence" headerAlign="center" allowSort="false" align="center" headerCls="list-font" cellCls="list-font list-large">顺序</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- END SAMPLE TABLE PORTLET-->
+
+    </div>
+
+</div>
+#end
+
+#macro(page_level_js_plugin)
+${include("/miniui_js.httl")}
+#end
+
+#macro(page_level_js)
+<script src="/assets/js/module/website/page/page.js" ></script>
+<script>
+    page.initList();
+</script>
+#end
+
+
+

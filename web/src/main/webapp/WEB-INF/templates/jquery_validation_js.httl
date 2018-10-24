@@ -1,0 +1,16 @@
+<script src="https://cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-validate/1.15.1/localization/messages_zh.min.js"></script>
+<script>
+    $.validator.addMethod("checkQQ",function(value,element,params){
+        var checkQQ = /^[1-9][0-9]{4,19}$/;
+        return this.optional(element)||(checkQQ.test(value));
+    },"请输入正确的QQ号码！");
+    $.validator.addMethod("checkPSW",function(value,element,params){
+        var checkPSW = /^[\da-zA-Z!@#$%^&*.]{6,20}$/;
+        return this.optional(element)||(checkPSW.test(value));
+    },"只允许6-20位英文字母、数字和符号");
+    $.validator.addMethod("checkPhone",function(value,element,params){
+        var checkPhone = /^1[3,5,7,8]\d{9}$/;
+        return this.optional(element)||(checkPhone.test(value));
+    },"请输入11位手机号");
+</script>

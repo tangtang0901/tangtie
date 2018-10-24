@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base-mservice/base-api/base-api.iml" filepath="$PROJECT_DIR$/base-mservice/base-api/base-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-mservice/base-mservice.iml" filepath="$PROJECT_DIR$/base-mservice/base-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-mservice/base-provider/base-provider.iml" filepath="$PROJECT_DIR$/base-mservice/base-provider/base-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-mservice/member-api/member-api.iml" filepath="$PROJECT_DIR$/member-mservice/member-api/member-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-mservice/member-command-side/member-command-side.iml" filepath="$PROJECT_DIR$/member-mservice/member-command-side/member-command-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-mservice/member-mservice.iml" filepath="$PROJECT_DIR$/member-mservice/member-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member-mservice/member-query-side/member-query-side.iml" filepath="$PROJECT_DIR$/member-mservice/member-query-side/member-query-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messaging/messaging.iml" filepath="$PROJECT_DIR$/messaging/messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-mservice/order-api/order-api.iml" filepath="$PROJECT_DIR$/order-mservice/order-api/order-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-mservice/order-command-side/order-command-side.iml" filepath="$PROJECT_DIR$/order-mservice/order-command-side/order-command-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-mservice/order-mservice.iml" filepath="$PROJECT_DIR$/order-mservice/order-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-mservice/order-query-side/order-query-side.iml" filepath="$PROJECT_DIR$/order-mservice/order-query-side/order-query-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primary-key-mservice/primary-key-api/primary-key-api.iml" filepath="$PROJECT_DIR$/primary-key-mservice/primary-key-api/primary-key-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primary-key-mservice/primary-key-mservice.iml" filepath="$PROJECT_DIR$/primary-key-mservice/primary-key-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primary-key-mservice/primary-key-provider/primary-key-provider.iml" filepath="$PROJECT_DIR$/primary-key-mservice/primary-key-provider/primary-key-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-mservice/product-api/product-api.iml" filepath="$PROJECT_DIR$/product-mservice/product-api/product-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-mservice/product-command-side/product-command-side.iml" filepath="$PROJECT_DIR$/product-mservice/product-command-side/product-command-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-mservice/product-mservice.iml" filepath="$PROJECT_DIR$/product-mservice/product-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-mservice/product-query-side/product-query-side.iml" filepath="$PROJECT_DIR$/product-mservice/product-query-side/product-query-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restapi/restapi.iml" filepath="$PROJECT_DIR$/restapi/restapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-mservice/security-api/security-api.iml" filepath="$PROJECT_DIR$/security-mservice/security-api/security-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-mservice/security-command-side/security-command-side.iml" filepath="$PROJECT_DIR$/security-mservice/security-command-side/security-command-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-mservice/security-mservice.iml" filepath="$PROJECT_DIR$/security-mservice/security-mservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-mservice/security-query-side/security-query-side.iml" filepath="$PROJECT_DIR$/security-mservice/security-query-side/security-query-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ywsite.iml" filepath="$PROJECT_DIR$/ywsite.iml" />
+    </modules>
+  </component>
+</project>

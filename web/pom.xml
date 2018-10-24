@@ -1,0 +1,434 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>web</artifactId>
+	<packaging>war</packaging>
+	<parent>
+		<groupId>com.yunwoo.cybershop</groupId>
+		<artifactId>cybershop</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<name>web</name>
+	<properties>
+		<spring.version>4.0.6.RELEASE</spring.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<spring.dubbo.registry.address>zookeeper://127.0.0.1:2181</spring.dubbo.registry.address>
+				<weblog.dir>/tmp</weblog.dir>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<spring.dubbo.registry.address>zookeeper://node2:2181</spring.dubbo.registry.address>
+				<weblog.dir>/tmp</weblog.dir>
+			</properties>
+			<activation><activeByDefault>true</activeByDefault></activation>
+		</profile>
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- log4j begin -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-web</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- log4j end -->
+		<!-- json start -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
+		<!-- json end -->
+		<!-- httl start -->
+		<dependency>
+			<groupId>com.github.httl</groupId>
+			<artifactId>httl-springmvc</artifactId>
+			<version>1.0.11</version>
+		</dependency>
+		<!-- httl end -->
+		<!-- servlet start -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- servlet end -->
+		<!-- spring start -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- incompliable version ,should be replaced -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-asm</artifactId> 
+			</dependency> -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc-portlet</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>4.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring end -->
+		<!--upload start-->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<!--upload end-->
+		<dependency>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jsp-2.1</artifactId>
+			<version>6.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yunwoo.cybershop</groupId>
+			<version>1.0-SNAPSHOT</version>
+			<artifactId>security-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yunwoo.cybershop</groupId>
+			<version>1.0-SNAPSHOT</version>
+			<artifactId>product-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+		</dependency>
+		<!-- zookeeper客户端 zkclient -->
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.31</version>
+		</dependency>
+        <dependency>
+            <groupId>com.yunwoo.cybershop</groupId>
+            <artifactId>member-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+		<dependency>
+			<groupId>com.yunwoo.cybershop</groupId>
+			<artifactId>base-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+        <dependency>
+            <groupId>com.yunwoo.cybershop</groupId>
+            <artifactId>primary-key-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+	<build>
+		<finalName>web</finalName>
+		<!-- 源码目录管理 -->
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+				<filtering>true</filtering>
+				<!-- 增加过滤 -->
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<pluginManagement>
+			<plugins>
+				<!-- 编译插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+
+				<!-- 资源文件插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<!-- 过滤后缀为p12的证书文�? <nonFilteredFileExtensions> <nonFilteredFileExtension>p12</nonFilteredFileExtension>
+							</nonFilteredFileExtensions> -->
+					</configuration>
+				</plugin>
+
+				<!-- 测试插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.17</version>
+				</plugin>
+
+				<!-- jar包插�? -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+					</configuration>
+				</plugin>
+
+				<!-- war包插插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+					</configuration>
+				</plugin>
+
+				<!-- 自定义打包插插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+
+				<!-- install插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+
+				<!-- deploy插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.1</version>
+				</plugin>
+
+				<!-- 站点报告插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<locales>zh_CN</locales>
+					</configuration>
+				</plugin>
+
+				<!-- 版本控制管理插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>1.9</version>
+				</plugin>
+
+				<!-- 容器插件 -->
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>8.1.14.v20131031</version>
+					<!--<version>6.1.26</version>-->
+				</plugin>
+
+				<!-- Eclemma -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>emma-maven-plugin</artifactId>
+					<version>1.0-alpha-3</version>
+					<inherited>true</inherited>
+					<executions>
+						<execution>
+							<phase>process-classes</phase>
+							<goals>
+								<goal>instrument</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- jetty插件 -->
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>maven-jetty-plugin</artifactId>
+					<version>6.1.26</version>
+					<!--<version>8.1.14.v20131031</version>-->
+					<!-- <configuration> <contextPath>/</contextPath> <scanIntervalSeconds>10</scanIntervalSeconds>
+						</configuration> -->
+					<configuration>
+						<contextPath>/</contextPath>
+						<scanIntervalSeconds>10</scanIntervalSeconds>
+						<reload>automatic</reload>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<!-- 编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<!-- 资源文件插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<!-- 过滤后缀为p12的证书文�? <nonFilteredFileExtensions> <nonFilteredFileExtension>p12</nonFilteredFileExtension>
+						</nonFilteredFileExtensions> -->
+				</configuration>
+			</plugin>
+			<!-- 测试插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+
+			<!-- jar包插�? -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+				</configuration>
+			</plugin>
+
+			<!-- war包插插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+				</configuration>
+			</plugin>
+			<!-- 自定义打包插插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+			<!-- install插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+			</plugin>
+			<!-- deploy插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+			<!-- 站点报告插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>zh_CN</locales>
+				</configuration>
+			</plugin>
+			<!-- 版本控制管理插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+			</plugin>
+			<!-- 容器插件 -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+			</plugin>
+			<!-- jetty插件 -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<!-- <configuration> <contextPath>/</contextPath> <scanIntervalSeconds>10</scanIntervalSeconds>
+					</configuration> -->
+				<configuration>
+					<contextPath>/</contextPath>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<reload>automatic</reload>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

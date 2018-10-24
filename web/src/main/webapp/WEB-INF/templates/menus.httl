@@ -1,0 +1,76 @@
+    <!-- BEGIN SIDEBAR -->
+
+		<div class="page-sidebar nav-collapse collapse">
+
+			<!-- BEGIN SIDEBAR MENU -->        
+
+			<ul class="page-sidebar-menu">
+
+				<li>
+
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+					<div class="sidebar-toggler hidden-phone"></div>
+
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+
+				</li>
+
+				<li>
+
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+
+					<form class="sidebar-search">
+
+						<div class="input-box">
+
+							<a href="javascript:;" class="remove"></a>
+
+							<input type="text" placeholder="Search..." />
+
+							<input type="button" class="submit" value=" " />
+
+						</div>
+
+					</form>
+
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+
+				</li>
+				#for(MenuDTO menu : allMenus)
+				<li class="">
+
+					<a href="#" data-href="${menu.url}${'?menuId='}${menu.id}" data-level="${menu.level}" data-name="${menu.name}" data-did="${menu.id}">
+
+					<i class="${menu.icon}"></i> 
+
+					<span class="title">${menu.name}</span>
+					
+					<span class="
+					#if(menu.children != null && menu.children.size > 0)
+					arrow
+					#end
+					"></span>
+					#if(menu.children != null && menu.children.size > 0)
+					<ul class="sub-menu">
+						#for(MenuDTO cMenu : menu.children)
+						<li >
+							<a href="#" data-href="${cMenu.url}${'?menuId='}${cMenu.id}" data-level="${cMenu.level}" data-name="${cMenu.name}" data-did="${cMenu.id}">
+								${cMenu.name}
+							</a>
+						</li>
+						#end
+					</ul>
+					#end
+					</a>
+
+				</li>
+				#end
+
+			</ul>
+
+			<!-- END SIDEBAR MENU -->
+
+		</div>
+
+		<!-- END SIDEBAR -->

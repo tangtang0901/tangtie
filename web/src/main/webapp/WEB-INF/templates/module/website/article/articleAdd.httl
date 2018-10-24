@@ -1,0 +1,76 @@
+${extends("/base_main_content.httl")}
+
+#macro(page_level_style)
+<link rel="stylesheet" type="text/css" href="/assets/plugins/ueditor/themes/default/css/ueditor.min.css" />
+#end
+
+#macro(page_main_content)
+<div class="row-fluid">
+
+	<div class="span12">
+		<div class="portlet box green">
+			<div class="portlet-title">
+				<div class="caption"><i class="icon-cogs"></i>新增文章</div>
+			</div>
+			<div class="portlet-body">
+
+				<form id="tform" class="form-horizontal">
+
+					<div class="control-group">
+
+						<label class="control-label">标题<span class="required">*</span></label>
+
+						<div class="controls">
+
+							<input type="text" name="title"  class="span6 m-wrap " required style="width: 750px;"/>
+
+						</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">文章内容</label>
+
+						<div class="controls">
+
+							<script id="ue_content" type="text/plain">
+
+							</script>
+
+						</div>
+
+					</div>
+
+					<div class="form-actions">
+
+						<button type="submit" class="btn green">保存</button>
+
+						<button type="button" class="btn" onclick="article.resetForm()">清空</button>
+
+					</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+#end
+
+#macro(page_level_js_plugin)
+${include("/jquery_validation_js.httl")}
+<script src="/assets/plugins/ueditor/ueditor.config.js"></script>
+<script src="/assets/plugins/ueditor/ueditor.all.js"></script>
+<script src="/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="/assets/js/module/website/article/article.js"></script>
+#end
+#macro(page_level_js)
+<script type="text/javascript">
+    article.initAdd();
+</script>
+
+#end
+
+
+

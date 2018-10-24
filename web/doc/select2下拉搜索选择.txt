@@ -1,0 +1,32 @@
+文档：http://select2.github.io/select2/#documentation
+例子：1
+$("#id").select2({
+            placeholder: "Search for a repository",
+            minimumInputLength: 0,
+            ajax: { // instead of writing the function to execute the request we use Select2's convenient helper
+                url: "/1000/food/getAllFood",
+                dataType: 'json',
+                quietMillis: 250,
+                data: function (term, page) {
+                    return {
+                        q: term, // search term
+                    };
+                },
+                results: function (data, page) {
+                    return { results: data };
+                },
+                cache: true
+            }
+            }
+
+)
+例子2：
+var foodListAjax = $.ajax({async:true,dataType:"json",url:"/1000/food/getAllFood"});
+;$("#id").select2({
+            placeholder: "Search for a repository",
+            minimumInputLength: 0,
+            data: foodListAjax.responseJSON
+            }
+);
+
+以上/1000/food/getAllFood的返回值是[{id:1,text:"a"},{id:2,text:"b"}]

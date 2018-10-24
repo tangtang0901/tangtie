@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base-api" />
+        <module name="base-provider" />
+        <module name="common" />
+        <module name="member-api" />
+        <module name="member-command-side" />
+        <module name="member-query-side" />
+        <module name="messaging" />
+        <module name="order-api" />
+        <module name="order-command-side" />
+        <module name="order-query-side" />
+        <module name="primary-key-api" />
+        <module name="primary-key-provider" />
+        <module name="product-api" />
+        <module name="product-command-side" />
+        <module name="product-query-side" />
+        <module name="productCategory-api" />
+        <module name="restapi" />
+        <module name="security-api" />
+        <module name="security-command-side" />
+        <module name="security-query-side" />
+        <module name="web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="base-api" target="1.5" />
+      <module name="base-mservice" target="1.5" />
+      <module name="base-provider" target="1.6" />
+      <module name="common" target="1.5" />
+      <module name="member-api" target="1.5" />
+      <module name="member-command-side" target="1.6" />
+      <module name="member-mservice" target="1.5" />
+      <module name="member-query-side" target="1.6" />
+      <module name="messaging" target="1.5" />
+      <module name="order-api" target="1.5" />
+      <module name="order-command-side" target="1.6" />
+      <module name="order-mservice" target="1.5" />
+      <module name="order-query-side" target="1.6" />
+      <module name="primary-key-api" target="1.5" />
+      <module name="primary-key-mservice" target="1.5" />
+      <module name="primary-key-provider" target="1.6" />
+      <module name="product-api" target="1.5" />
+      <module name="product-command-side" target="1.6" />
+      <module name="product-mservice" target="1.5" />
+      <module name="product-query-side" target="1.6" />
+      <module name="restapi" target="1.8" />
+      <module name="security-api" target="1.5" />
+      <module name="security-command-side" target="1.6" />
+      <module name="security-mservice" target="1.5" />
+      <module name="security-query-side" target="1.6" />
+      <module name="web" target="1.8" />
+      <module name="ywsite" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

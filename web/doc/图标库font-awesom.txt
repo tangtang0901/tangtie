@@ -1,0 +1,2 @@
+有关图标的class都可以用font-awesom提供的图标。
+如icon-home等类型。前往http://www.bootcss.com/p/font-awesome/#icons-web-app查看现成图标文档

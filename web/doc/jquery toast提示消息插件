@@ -1,0 +1,19 @@
+$.toast({
+    heading: 'Information',
+    text: 'Now you can add icons to generate different kinds of toasts',
+    showHideTransition: 'slide',
+    position:'top-right',
+    icon: 'info'
+})
+
+icon常用：info、error、warning、success
+showHideTransition常用：fade、slide
+position常用：
+bottom-left
+bottom-right
+bottom-center
+top-right
+top-left
+top-center
+mid-center
+文档：http://kamranahmed.info/toast#

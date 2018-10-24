@@ -1,0 +1,14 @@
+
+<link href="/assets/plugins/easyui/themes/metro-green/easyui.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/plugins/easyui/themes/icon.css" rel="stylesheet" type="text/css"/>
+<link href="/assets/plugins/easyui/themes/color.css" rel="stylesheet" type="text/css"/>
+
+<style type="text/css">
+    .datagrid-cell{
+        font-weight: bold;
+    }
+    .datagrid-header{
+        font-weight: bold;
+    }
+
+</style>

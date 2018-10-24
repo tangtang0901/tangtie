@@ -1,0 +1,9 @@
+com\yunwoo\cybershop\handler\command\MemberCommandHandler.class
+com\yunwoo\cybershop\domain\Member.class
+com\yunwoo\cybershop\business\MemberService.class
+com\yunwoo\cybershop\dubbo\MemberCommandDubboServiceImpl.class
+com\yunwoo\cybershop\config\AxonConfig.class
+com\yunwoo\cybershop\MemberCommandSideApplication.class
+com\yunwoo\cybershop\business\impl\MemberServiceImpl.class
+com\yunwoo\cybershop\config\DBConfig.class
+com\yunwoo\cybershop\config\MQConfig.class

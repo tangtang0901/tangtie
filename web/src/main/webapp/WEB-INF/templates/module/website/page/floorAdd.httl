@@ -1,0 +1,79 @@
+${extends("/base_main_content.httl")}
+
+#macro(page_level_style)
+#end
+
+#macro(page_main_content)
+<div class="row-fluid">
+
+	<div class="span12">
+		<div class="portlet box green">
+			<div class="portlet-title">
+				<div class="caption"><i class="icon-cogs"></i>新增楼层</div>
+			</div>
+			<div class="portlet-body">
+
+				<form id="tform" class="form-horizontal">
+
+					<div class="control-group">
+
+						<input type="hidden" name="pageId" id="hid_pageId" value="${pageId}"/>
+
+						<label class="control-label">楼层类型<span class="required">*</span></label>
+
+						<div class="controls">
+
+							<select name="type" class="span3 m-wrap">
+								<option value="1">轮播图</option>
+								<option value="2">整图</option>
+								<option value="3">半图</option>
+								<option value="4">文本</option>
+							</select>
+
+						</div>
+
+					</div>
+
+					<div class="control-group">
+
+						<label class="control-label">顺序<span class="required">*</span></label>
+
+						<div class="controls">
+
+							<input type="text" name="sequence"  class="span3 m-wrap " required />
+
+						</div>
+
+					</div>
+
+
+					<div class="form-actions">
+
+						<button type="submit" class="btn green">保存</button>
+
+						<button type="button" class="btn" onclick="article.resetForm()">清空</button>
+
+					</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+#end
+
+#macro(page_level_js_plugin)
+${include("/jquery_validation_js.httl")}
+<script src="/assets/plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="/assets/js/module/website/page/page.js"></script>
+#end
+#macro(page_level_js)
+<script type="text/javascript">
+    page.initFloorAdd($("#hid_pageId").val());
+</script>
+
+#end
+
+
+

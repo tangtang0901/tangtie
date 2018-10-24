@@ -1,0 +1,6 @@
+com\yunwoo\cybershop\constant\MsgTemplate.class
+com\yunwoo\cybershop\dto\MsgConfigDTO.class
+com\yunwoo\cybershop\dubbo\PictureQueryDubboService.class
+com\yunwoo\cybershop\dto\MsgTemplateDTO.class
+com\yunwoo\cybershop\dto\PictureDTO.class
+com\yunwoo\cybershop\dubbo\MsgProviderDubboService.class

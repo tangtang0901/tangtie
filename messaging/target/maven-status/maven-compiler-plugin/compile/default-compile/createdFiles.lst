@@ -1,0 +1,10 @@
+com\yunwoo\cybershop\event\member\MemberCreateEvent.class
+com\yunwoo\cybershop\event\order\OrderCloseSagaEvent.class
+com\yunwoo\cybershop\event\member\MemberDisableEvent.class
+com\yunwoo\cybershop\event\product\ProductCategoryCreateEvent.class
+com\yunwoo\cybershop\event\product\ProductCategoryUpdateEvent.class
+com\yunwoo\cybershop\event\member\MemberUpdateEvent.class
+com\yunwoo\cybershop\event\order\OrderCreateEvent.class
+com\yunwoo\cybershop\event\member\MemberEnableEvent.class
+com\yunwoo\cybershop\event\order\OrderCloseEvent.class
+com\yunwoo\cybershop\event\member\MemberChangePasswordEvent.class
